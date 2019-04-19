@@ -3,6 +3,7 @@ from hashlib import sha1  # 密码加密
 from .models import UserInfo
 import re
 from django.http import HttpResponseRedirect, JsonResponse, HttpResponse
+from . import user_decorator
 
 
 # Create your views here.
@@ -105,21 +106,27 @@ def login_handle(request):
     # return HttpResponse('用户不存在')
 
 
+@user_decorator.login
 def logout(request):
-    pass
+    return HttpResponse('退出')
 
 
-def info(request):
-    pass
+@user_decorator.login
+def info(request):   # 个人信息
+    # return HttpResponse('个人信息')
+    return render(request, 'df_user/user_center_info.html', {})
 
 
-def order(request):
-    pass
+@user_decorator.login
+def order(request):   # 全部订单
+    # return HttpResponse('订单')
+    return render(request, 'df_user/user_center_order.html', {})
 
 
-def site(request):
-    pass
-
+@user_decorator.login
+def site(request):   # 收货地址
+    # return HttpResponse('修改个人信息')
+    return render(request, 'df_user/user_center_site.html', {})
 
 
 
