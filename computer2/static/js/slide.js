@@ -1,3 +1,4 @@
+
 $(function(){
 	var $slides = $('.slide_pics li');
 	var len = $slides.length;
