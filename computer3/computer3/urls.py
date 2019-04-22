@@ -19,6 +19,6 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^user/', include('df_user.urls')),
-    url(r'^goods', include('df_goods.urls')),
+    url(r'user/', include('df_user.urls')),
+    url(r'goods/', include('df_goods.urls')),
 ]
