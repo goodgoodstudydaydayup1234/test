@@ -74,9 +74,9 @@
 	 <ul class="list-group vertical-menu yamm make-absolute">
 		<li class="list-group-item"><span><i class="fa fa-list-ul"></i>所有商品</span></li>
 
-		<li class="highlight menu-item animate-dropdown"><a title="台式机" href="taishiji.html">台式机</a></li>
+		<li class="highlight menu-item animate-dropdown"><a title="台式机" href="taishiji/">台式机</a></li>
 
-		<li class="highlight menu-item animate-dropdown"><a title="笔记本" href="bijiben.html">笔记本</a></li>
+		<li class="highlight menu-item animate-dropdown"><a title="笔记本" href="bijiben">笔记本</a></li>
 
 		<li class="highlight menu-item animate-dropdown"><a title="购物车" href="gouwuche.html">购物车</a></li>
 
@@ -221,14 +221,14 @@
 		<div class="ad col-xs-12 col-sm-4">
 			<div class="media">
 				<div class="media-left media-middle">
-					<img data-echo="/static/images/bijiben/lianxiang/bijiben_lianxiang_a_b1.jpg" src="/static/images/bijiben/lianxiang/bijiben_lianxiang_a_b1.jpg" alt="">
+					<img data-echo="/static/images/b1.jpg" src="/static/images/b1.jpg" alt="">
 				</div>
 				<div class="media-body media-middle">
 					<div class="ad-text">
-						 <br> 联想(Lenovo)小新Air英特尔酷睿i5 13.3英寸超轻薄笔记本电脑 <span style="color: red;">酷睿8代处理器</span> <br>
+						 <br> 联想(Lenovo)英特尔酷睿i5 13.3英寸超轻薄笔记本电脑 <span style="color: red;">酷睿8代处理器</span> <br>
 					</div>
 					<div class="ad-action">
-						<a href="single-product.html">现在去买</a>
+						<a href="single.html">现在去买</a>
 					</div>
 				</div>
 			</div>
@@ -237,14 +237,14 @@
 		<div class="ad col-xs-12 col-sm-4">
 			<div class="media">
 				<div class="media-left media-middle">
-					<img data-echo="/static/images/bjb/03.jpg" src="/static/images/bjb/03.jpg" alt="">
+					<img data-echo="/static/images/b1.jpg" src="/static/images/b1.jpg" alt="">
 				</div>
 				<div class="media-body media-middle">
 					<div class="ad-text">
 						<br> HUAWEI MateBook 13系列<span style="color: red;">酷睿8代处理器美全面屏</span> <br>
 					</div>
 					<div class="ad-action">
-						<a href="single-product.html">现在去买</a>
+						<a href="single.html">现在去买</a>
 					</div>
 
 				</div>
@@ -254,14 +254,14 @@
 		<div class="ad col-xs-12 col-sm-4">
 			<div class="media">
 				<div class="media-left media-middle">
-					<img data-echo="/static/images/bjb/04.jpg" src="/static/images/bjb/04.jpg" alt="">
+					<img data-echo="/static/images/b1.jpg" src="/static/images/b1.jpg" alt="">
 				</div>
 				<div class="media-body media-middle">
 					<div class="ad-text">
 						<br>ThinkPad X1 隐士系列 <span style="color: red;">酷睿8代处理器，高性能显卡，触控屏</span><br>
 					</div>
 					<div class="ad-action">
-						<a href="single-product.html"> 现在去买</a>
+						<a href="single.html"> 现在去买</a>
 					</div>
 				</div>
 			</div>
@@ -288,29 +288,31 @@
 
 						<ul class="products columns-3" style="width: 1170px;">
 
+                                {% for g in goods %}
 
 							<li class="product ">
-                                {% for t in type0 %}
-								<div class="product-outer">
-								<div class="product-inner">
-									<a href="single-product.html">
+								<div class="product-outer" style="display: inline-block; width: 280px; height: 450px;float: left;margin-left: 10px" >
+
+                                    <div class="product-inner">
+
+									<a href="single.html">
 {#										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>#}
-										<h3>{{ t.gtitle }}</h3>
+										<h3>{{ g.gtitle }}</h3>
 										<div class="product-thumbnail">
 {#											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">#}
-											<img src="{{ t.gpicb1 }}" data-echo="{{ t.gpicb1 }}" class="img-responsive" alt="">
+											<img src="/{{ g.gpicb1 }}" data-echo="/{{ g.gpicb1 }}" class="img-responsive" alt="">
 										</div>
 									</a>
 
 									<div class="price-add-to-cart">
 										<span class="price">
 											<span class="electro-price">
-												<ins><span class="amount">{{ t.gprice }}</span></ins>
+												<ins><span class="amount">￥{{ g.gprice }}</span></ins>
 
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -318,129 +320,129 @@
 										</li>
 
 
-							<li class="product ">
-								<div class="product-outer">
-								<div class="product-inner">
-									<a href="single-product.html">
-										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
-										<div class="product-thumbnail">
-											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
-										</div>
-									</a>
-
-									<div class="price-add-to-cart">
-										<span class="price">
-											<span class="electro-price">
-												<ins><span class="amount"> ￥1,999.00</span></ins>
-
-																	<span class="amount"> </span>
-											</span>
-										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
-									</div>
-								</div>
-							</div>
-										</li>
-
-
-							<li class="product ">
-								<div class="product-outer">
-								<div class="product-inner">
-									<a href="single-product.html">
-										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
-										<div class="product-thumbnail">
-											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
-										</div>
-									</a>
-
-									<div class="price-add-to-cart">
-										<span class="price">
-											<span class="electro-price">
-												<ins><span class="amount"> ￥1,999.00</span></ins>
-
-																	<span class="amount"> </span>
-											</span>
-										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
-									</div>
-								</div>
-							</div>
-										</li>
+{#							<li class="product ">#}
+{#								<div class="product-outer">#}
+{#								<div class="product-inner">#}
+{#									<a href="single.html">#}
+{#										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>#}
+{#										<div class="product-thumbnail">#}
+{#											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">#}
+{#										</div>#}
+{#									</a>#}
+{##}
+{#									<div class="price-add-to-cart">#}
+{#										<span class="price">#}
+{#											<span class="electro-price">#}
+{#												<ins><span class="amount"> ￥1,999.00</span></ins>#}
+{##}
+{#																	<span class="amount"> </span>#}
+{#											</span>#}
+{#										</span>#}
+{#										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#										</li>#}
 
 
-							<li class="product ">
-								<div class="product-outer">
-								<div class="product-inner">
-									<a href="single-product.html">
-										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
-										<div class="product-thumbnail">
-											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
-										</div>
-									</a>
-
-									<div class="price-add-to-cart">
-										<span class="price">
-											<span class="electro-price">
-												<ins><span class="amount"> ￥1,999.00</span></ins>
-
-																	<span class="amount"> </span>
-											</span>
-										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
-									</div>
-								</div>
-							</div>
-										</li>
-
-
-							<li class="product ">
-								<div class="product-outer">
-								<div class="product-inner">
-									<a href="single-product.html">
-										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
-										<div class="product-thumbnail">
-											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
-										</div>
-									</a>
-
-									<div class="price-add-to-cart">
-										<span class="price">
-											<span class="electro-price">
-												<ins><span class="amount"> ￥1,999.00</span></ins>
-
-																	<span class="amount"> </span>
-											</span>
-										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
-									</div>
-								</div>
-							</div>
-										</li>
+{#							<li class="product ">#}
+{#								<div class="product-outer">#}
+{#								<div class="product-inner">#}
+{#									<a href="single.html">#}
+{#										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>#}
+{#										<div class="product-thumbnail">#}
+{#											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">#}
+{#										</div>#}
+{#									</a>#}
+{##}
+{#									<div class="price-add-to-cart">#}
+{#										<span class="price">#}
+{#											<span class="electro-price">#}
+{#												<ins><span class="amount"> ￥1,999.00</span></ins>#}
+{##}
+{#																	<span class="amount"> </span>#}
+{#											</span>#}
+{#										</span>#}
+{#										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#										</li>#}
 
 
-							<li class="product ">
-								<div class="product-outer">
-								<div class="product-inner">
-									<a href="single-product.html">
-										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
-										<div class="product-thumbnail">
-											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
-										</div>
-									</a>
+{#							<li class="product ">#}
+{#								<div class="product-outer">#}
+{#								<div class="product-inner">#}
+{#									<a href="single.html">#}
+{#										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>#}
+{#										<div class="product-thumbnail">#}
+{#											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">#}
+{#										</div>#}
+{#									</a>#}
+{##}
+{#									<div class="price-add-to-cart">#}
+{#										<span class="price">#}
+{#											<span class="electro-price">#}
+{#												<ins><span class="amount"> ￥1,999.00</span></ins>#}
+{##}
+{#																	<span class="amount"> </span>#}
+{#											</span>#}
+{#										</span>#}
+{#										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#										</li>#}
 
-									<div class="price-add-to-cart">
-										<span class="price">
-											<span class="electro-price">
-												<ins><span class="amount"> ￥1,999.00</span></ins>
 
-																	<span class="amount"> </span>
-											</span>
-										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
-									</div>
-								</div>
-							</div>
-										</li>
+{#							<li class="product ">#}
+{#								<div class="product-outer">#}
+{#								<div class="product-inner">#}
+{#									<a href="single.html">#}
+{#										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>#}
+{#										<div class="product-thumbnail">#}
+{#											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">#}
+{#										</div>#}
+{#									</a>#}
+{##}
+{#									<div class="price-add-to-cart">#}
+{#										<span class="price">#}
+{#											<span class="electro-price">#}
+{#												<ins><span class="amount"> ￥1,999.00</span></ins>#}
+{##}
+{#																	<span class="amount"> </span>#}
+{#											</span>#}
+{#										</span>#}
+{#										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#										</li>#}
+
+
+{#							<li class="product ">#}
+{#								<div class="product-outer">#}
+{#								<div class="product-inner">#}
+{#									<a href="single.html">#}
+{#										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>#}
+{#										<div class="product-thumbnail">#}
+{#											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">#}
+{#										</div>#}
+{#									</a>#}
+{##}
+{#									<div class="price-add-to-cart">#}
+{#										<span class="price">#}
+{#											<span class="electro-price">#}
+{#												<ins><span class="amount"> ￥1,999.00</span></ins>#}
+{##}
+{#																	<span class="amount"> </span>#}
+{#											</span>#}
+{#										</span>#}
+{#										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#										</li>#}
 						</ul>
 
 
@@ -457,7 +459,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -472,7 +474,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -482,7 +484,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -497,7 +499,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -507,7 +509,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -522,7 +524,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -532,7 +534,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -547,7 +549,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -557,7 +559,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -572,7 +574,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -582,7 +584,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -597,7 +599,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -619,7 +621,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -634,7 +636,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -644,7 +646,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -659,7 +661,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -669,7 +671,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -684,7 +686,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -694,7 +696,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -709,7 +711,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -719,7 +721,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -734,7 +736,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -744,7 +746,7 @@
 							<li class="product ">
 								<div class="product-outer">
 								<div class="product-inner">
-									<a href="single-product.html">
+									<a href="single.html">
 										<h3>Tablet Red EliteBook  Revolve 810 G2</h3>
 										<div class="product-thumbnail">
 											<img src="/static/assets/images/blank.gif" data-echo="/static/assets/images/products/2.jpg" class="img-responsive" alt="">
@@ -759,7 +761,7 @@
 																	<span class="amount"> </span>
 											</span>
 										</span>
-										<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+										<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
 									</div>
 								</div>
 							</div>

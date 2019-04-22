@@ -28,7 +28,7 @@ def register_handle(request):
 
     # 虽然js已经写了一遍验证，但是当网络不好或者其他原因时，会绕过前端的js验证，所以最好再加上后台验证
 
-    # # 判断用户是否填写了信息
+    # 判断用户是否填写了信息
     # if not (uname and upwd and upwd2 and uemail):
     #     return redirect('/user/register/')
     #
@@ -87,7 +87,7 @@ def login_handle(request):
         s1.update(upwd.encode("utf-8"))
         if s1.hexdigest() == users[0].upwd:
             return redirect('/goods/')
-            # return HttpResponse('登录成功')
+            # # return HttpResponse('登录成功')
             # url = request.COOKIES.get('url', '/')  # 获取登录之前进入的页面,如果没有,则进入首页
             # red = HttpResponseRedirect(url)  # 用变量记住,方便设置cookie
             # # 记住用户名

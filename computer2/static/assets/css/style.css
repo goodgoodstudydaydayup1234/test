@@ -4784,7 +4784,9 @@ ul.products > li.product, .section-onsale-product ul.products > .onsale-product,
     ul.products > li.product, .section-onsale-product ul.products > .onsale-product, .section-onsale-product-carousel .onsale-product-carousel .onsale-product ul.products > .onsale-product-content, .products-carousel .owl-item ul.products > .product {
       width: 33.3333333333%; } }
   ul.products > li.product.first, .section-onsale-product ul.products > .first.onsale-product, .section-onsale-product-carousel .onsale-product-carousel .onsale-product ul.products > .first.onsale-product-content, .products-carousel .owl-item ul.products > .first.product {
-    clear: both; }
+   }
+    /*ul.products > li.product.first, .section-onsale-product ul.products > .first.onsale-product, .section-onsale-product-carousel .onsale-product-carousel .onsale-product ul.products > .first.onsale-product-content, .products-carousel .owl-item ul.products > .first.product {*/
+    /*clear: both; }*/
   ul.products > li.product.last:after, .section-onsale-product ul.products > .last.onsale-product:after, .section-onsale-product-carousel .onsale-product-carousel .onsale-product ul.products > .last.onsale-product-content:after, .products-carousel .owl-item ul.products > .last.product:after {
     content: none; }
 
