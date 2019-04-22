@@ -201,13 +201,6 @@
 							<main id="main" class="site-main">
 
 
-{#								<header class="page-header">#}
-{#                                {% for g in goods %}#}
-{#									<h1 class="page-title">{{ g.tbrand }}</h1>#}
-{#                                {% endfor %}#}
-{#                                 </header>#}
-
-
 								<div class="shop-control-bar">
 									<form class="woocommerce-ordering" method="get">
 					<select name="orderby" class="orderby">
@@ -243,11 +236,11 @@
 													<div class="product-outer">
 															<div class="product-inner">
 																<!-- <span class="loop-product-categories"><a href="product-category.html" rel="tag">Smartphones</a></span> -->
-																<a href="single/{{ g.id }}">
-																	<h3>{{ g.tname }}</h3>
+																<a href="single1/{{ g.id }}">
+																	<h3>{{ g.bname }}</h3>
 																	<div class="product-thumbnail">
 													
-																		<img data-echo="/{{ g.timgb1 }}" src="/{{ g.timgb1 }}" alt="">
+																		<img data-echo="/{{ g.bimgb1 }}" src="/{{ g.bimgb1 }}" alt="">
 													
 																	</div>
 																</a>
@@ -255,7 +248,7 @@
 																<div class="price-add-to-cart" style="padding-top: 15px">
 																	<span class="price">
 																		<span class="electro-price">
-																			<ins><span class="amount">￥{{ g.tprice }}</span></ins>
+																			<ins><span class="amount">￥{{ g.bprice }}</span></ins>
 																			
 																		</span>
 																	</span>

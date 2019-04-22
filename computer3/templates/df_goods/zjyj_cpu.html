@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- <title>Electro &#8211; Electronics Ecommerce Theme</title> -->
-		<title></title>
+		<title>装机硬件—CPU</title>
 
         <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css" media="all" />
         <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.min.css" media="all" />
@@ -187,10 +187,10 @@
 								</div>
 							</div>
 						</form>        
+							
 					</div>
-				</nav>
+			</nav>
 			
-
 			<div id="content" class="site-content" tabindex="-1">
 				<div class="container">
 
@@ -200,15 +200,12 @@
 						<div id="primary" class="content-area">
 							<main id="main" class="site-main">
 
+								
+								<header class="page-header">
+									<h1 class="page-title">装机硬件—CPU</h1>
+								</header>
 
-{#								<header class="page-header">#}
-{#                                {% for g in goods %}#}
-{#									<h1 class="page-title">{{ g.tbrand }}</h1>#}
-{#                                {% endfor %}#}
-{#                                 </header>#}
-
-
-								<div class="shop-control-bar">
+								<div class="shop-control-bar">									
 									<form class="woocommerce-ordering" method="get">
 					<select name="orderby" class="orderby">
 						<option value="menu_order"  selected='selected'>默认排序</option>
@@ -238,33 +235,33 @@
 								
 									<div role="tabpanel" class="tab-pane active" id="grid" aria-expanded="true">
 										<ul class="products columns-3">
-                                            {% for g in goods %}
+											{% for g in goods %}
 											<li class="product first">
 													<div class="product-outer">
 															<div class="product-inner">
 																<!-- <span class="loop-product-categories"><a href="product-category.html" rel="tag">Smartphones</a></span> -->
-																<a href="single/{{ g.id }}">
-																	<h3>{{ g.tname }}</h3>
+																<a href="singlec/{{ g.id }}">
+																	<h3>{{ g.cname }}</h3>
 																	<div class="product-thumbnail">
 													
-																		<img data-echo="/{{ g.timgb1 }}" src="/{{ g.timgb1 }}" alt="">
+																		<img data-echo="/{{g.cimgb1}}" src="/{{g.cimgb1}}" alt="">
 													
 																	</div>
 																</a>
 													
-																<div class="price-add-to-cart" style="padding-top: 15px">
+																<div class="price-add-to-cart">
 																	<span class="price">
 																		<span class="electro-price">
-																			<ins><span class="amount">￥{{ g.tprice }}</span></ins>
+																			<ins><span class="amount">￥{{ g.cprice }}</span></ins>
 																			
 																		</span>
 																	</span>
-																	<a rel="nofollow" href="single.html" class="button add_to_cart_button">Add to cart</a>
+																	<a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
 																</div><!-- /.price-add-to-cart -->
 															</div><!-- /.product-inner -->
 														</div><!-- /.product-outer -->
-                                                {% endfor %}
-											</li>
+													</li>
+											{% endfor %}
 										</ul>
 									</div>
 								</div>
@@ -286,40 +283,43 @@
 
 						<div id="sidebar" class="sidebar" role="complementary">
 							<aside class="widget widget_electro_products_filter">
-								<h3 class="widget-title">筛选</h3>
-								<aside class="widget woocommerce widget_layered_nav">
-									<h3 class="widget-title">处理器</h3>
-									<ul>
-										<li style=""><a href="#">Intel i3</a> <span class="count">(4)</span></li>
-										<li style=""><a href="#">Intel i5</a> <span class="count">(2)</span></li>
-										<li style=""><a href="#">Intel i7</a> <span class="count">(2)</span></li>
-									</ul>
-									
-								</aside>
-								<aside class="widget woocommerce widget_layered_nav">
-									<h3 class="widget-title">显卡</h3>
-									<ul>
-										<li style=""><a href="#">RX480</a> <span class="count">(4)</span></li>
-										<li style=""><a href="#">GTX1050</a> <span class="count">(2)</span></li>
-										<li style=""><a href="#">GTX1060</a> <span class="count">(2)</span></li>
-										<li style=""><a href="#">GTX1070</a> <span class="count">(4)</span></li>
-										<li style=""><a href="#">GTX1080</a> <span class="count">(4)</span></li>
-									</ul>
-								   
-								</aside>
-								<aside class="widget woocommerce widget_layered_nav">
-									<h3 class="widget-title">操作系统</h3>
-									<ul>
-										<li style=""><a href="#">window7</a> <span class="count">(4)</span></li>
-										<li style=""><a href="#">window8</a> <span class="count">(2)</span></li>
-										<li style=""><a href="#">window10</a> <span class="count">(2)</span></li>
-										<li style=""><a href="#">linux</a> <span class="count">(4)</span></li>
-										<!-- <li style=""><a href="#">GTX1080</a> <span class="count">(4)</span></li> -->
-									</ul>
-								   
-								</aside>
-							</aside>
-												
+					<h3 class="widget-title">筛选</h3>
+					<aside class="widget woocommerce widget_layered_nav">
+						<h3 class="widget-title">品牌</h3>
+						<ul>
+							<li style=""><a href="#">Inter</a> <span class="count">(4)</span></li>
+							<li style=""><a href="#">AMD</a> <span class="count">(2)</span></li>
+							<li style=""><a href="#">华硕</a> <span class="count">(2)</span></li>
+							<li style=""><a href="#">昂达</a> <span class="count">(2)</span></li>
+						</ul>						
+					</aside>
+					<aside class="widget woocommerce widget_layered_nav">
+						<h3 class="widget-title">版型</h3>
+						<ul>
+							<li style=""><a href="#">ATX（标准型）</a> <span class="count">(4)</span></li>
+							<li style=""><a href="#">E-ATX（加强型）</a> <span class="count">(2)</span></li>
+							<li style=""><a href="#">MINI-ITX（迷你型）</a> <span class="count">(2)</span></li>
+						</ul>						
+					</aside>
+					<aside class="widget woocommerce widget_layered_nav">
+						<h3 class="widget-title">Intel芯片</h3>
+						<ul>
+							<li style=""><a href="#">H61</a> <span class="count">(4)</span></li>
+							<li style=""><a href="#">H110</a> <span class="count">(2)</span></li>
+							<li style=""><a href="#">B250</a> <span class="count">(2)</span></li>
+							<li style=""><a href="#">Z370</a> <span class="count">(2)</span></li>
+						</ul>						
+					</aside>
+					<aside class="widget woocommerce widget_layered_nav">
+						<h3 class="widget-title">AMD芯片</h3>
+						<ul>
+							<li style=""><a href="#">A320</a> <span class="count">(4)</span></li>
+							<li style=""><a href="#">B350</a> <span class="count">(2)</span></li>
+							<li style=""><a href="#">X399</a> <span class="count">(2)</span></li>
+						</ul>						
+					</aside>
+				</aside>
+					
 								</div>
 
 					</div><!-- .container -->
@@ -358,13 +358,13 @@
 								<h4 class="widget-title">Find It Fast</h4>
 								<div class="menu-footer-menu-1-container">
 									<ul id="menu-footer-menu-1" class="menu">
-										<li class="menu-item"><a href="single.html">Laptops &#038; Computers</a></li>
-										<li class="menu-item"><a href="single.html">Cameras &#038; Photography</a></li>
-										<li class="menu-item"><a href="single.html">Smart Phones &#038; Tablets</a></li>
-										<li class="menu-item"><a href="single.html">Video Games &#038; Consoles</a></li>
-										<li class="menu-item"><a href="single.html">TV &#038; Audio</a></li>
-										<li class="menu-item"><a href="single.html">Gadgets</a></li>
-										<li class="menu-item "><a href="single.html">Car Electronic &#038; GPS</a></li>
+										<li class="menu-item"><a href="single-product.html">Laptops &#038; Computers</a></li>
+										<li class="menu-item"><a href="single-product.html">Cameras &#038; Photography</a></li>
+										<li class="menu-item"><a href="single-product.html">Smart Phones &#038; Tablets</a></li>
+										<li class="menu-item"><a href="single-product.html">Video Games &#038; Consoles</a></li>
+										<li class="menu-item"><a href="single-product.html">TV &#038; Audio</a></li>
+										<li class="menu-item"><a href="single-product.html">Gadgets</a></li>
+										<li class="menu-item "><a href="single-product.html">Car Electronic &#038; GPS</a></li>
 									</ul>
 								</div>
 							</div>
@@ -377,10 +377,10 @@
 								<h4 class="widget-title">&nbsp;</h4>
 								<div class="menu-footer-menu-2-container">
 									<ul id="menu-footer-menu-2" class="menu">
-										<li class="menu-item"><a href="single.html">Printers &#038; Ink</a></li>
-										<li class="menu-item "><a href="single.html">Software</a></li>
-										<li  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2742"><a href="single.html">Office Supplies</a></li>
-										<li  class="menu-item "><a href="single.html">Computer Components</a></li>
+										<li class="menu-item"><a href="single-product.html">Printers &#038; Ink</a></li>
+										<li class="menu-item "><a href="single-product.html">Software</a></li>
+										<li  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2742"><a href="single-product.html">Office Supplies</a></li>
+										<li  class="menu-item "><a href="single-product.html">Computer Components</a></li>
 									</ul>
 								</div>
 							</div>
@@ -393,12 +393,12 @@
 								<h4 class="widget-title">Customer Care</h4>
 								<div class="menu-footer-menu-3-container">
 									<ul id="menu-footer-menu-3" class="menu">
-										<li class="menu-item"><a href="single.html">My Account</a></li>
-										<li class="menu-item"><a href="single.html">Track your Order</a></li>
-										<li class="menu-item"><a href="single.html">Wishlist</a></li>
-										<li class="menu-item"><a href="single.html">Customer Service</a></li>
-										<li class="menu-item"><a href="single.html">Returns/Exchange</a></li>
-										<li class="menu-item"><a href="single.html">FAQs</a></li>
+										<li class="menu-item"><a href="single-product.html">My Account</a></li>
+										<li class="menu-item"><a href="single-product.html">Track your Order</a></li>
+										<li class="menu-item"><a href="single-product.html">Wishlist</a></li>
+										<li class="menu-item"><a href="single-product.html">Customer Service</a></li>
+										<li class="menu-item"><a href="single-product.html">Returns/Exchange</a></li>
+										<li class="menu-item"><a href="single-product.html">FAQs</a></li>
 										<li class="menu-item"><a href="hsingle-product.html">Product Support</a></li>
 									</ul>
 								</div>
@@ -557,3 +557,4 @@
 
     </body>
 </html>
+
