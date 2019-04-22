@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+          name_error=false;
+          pwd_error=false;
+
+
+          $('.name_input').blur(function () {
+              if($('.name_input').val().length == 0){
+                  $('.user_error').html('请填写用户名').show();
+                  name_error=false;
+              }else {
+                  $('.user_error').hide();
+                  name_error=true;
+              }
+          });
+
+          $('.pass_input').blur(function () {
+             if($('.pass_input').val().length == 0){
+                 $('.pwd_error').html('请填写密码').show();
+                 pwd_error=false;
+             }else {
+                 $('.user_error').hide();
+                 name_error=true;
+             }
+          });
+
+        })
+  </script>
+</head>
+<body>
+
+
+
+    <div class="login_top clearfix" style="height: 150px">
+		<!--<a href="/" class="login_logo"><img src="/static/images/logo1.jpg"></a>-->
+	</div>
+
+	<div class="login_form_bg">
+		<div class="login_form_wrap clearfix">
+			<div class="login_banner fl"></div>
+			<!--<div class="slogan fl">丝滑般的享受</div>-->
+			<div class="login_form fr">
+				<div class="login_title clearfix">
+					<h1>用户登录</h1>
+					<a href="/user/register/">立即注册</a>
+				</div>
+				<div class="form_input">
+					<form action="/user/login_handle/" method="post">
+                        {% csrf_token %}
+						<input type="text" name="username" class="name_input" value="{{ uname }}" placeholder="请输入用户名">
+						<div class="user_error">输入错误</div>
+						<input type="password" name="pwd" class="pass_input" value="{{ upwd }}" placeholder="请输入密码">
+						<div class="pwd_error">输入错误</div>
+						<div class="more_input clearfix">
+                            <input type="checkbox" name="jizhu" value='1' checked="checked">
+							<label>记住用户名</label>
+							<a href="#">忘记密码</a>
+						</div>
+						<input type="submit" name="" value="登录" class="input_submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="footer">
+		<div class="foot_link">
+			<a href="#">关于我们</a>
+			<span>|</span>
+			<a href="#">联系我们</a>
+			<span>|</span>
+			<a href="#">招聘人才</a>
+			<span>|</span>
+			<a href="#">友情链接</a>
+		</div>
+		<p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
+		<p>电话：010-****888    京ICP备*******8号</p>
+	</div>
+
+
+</body>
+</html>
