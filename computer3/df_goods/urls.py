@@ -1,6 +1,9 @@
 from django.conf.urls import url
 from . import views
 urlpatterns = [
+
+    url(r'^list/$', views.list),
+
     url(r'^$', views.index),
     url(r'^singlec/(\d+)/$', views.singlei),
     url(r'^taishiji/$', views.taishiji),
@@ -40,6 +43,5 @@ urlpatterns = [
 
     url(r'^jixiang/$', views.jixiang),
     url(r'^jixiang/singlej/(\d+)/$', views.singlej),
-
 
 ]

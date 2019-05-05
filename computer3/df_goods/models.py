@@ -3,6 +3,14 @@ from django.db import models
 # Create your models here.
 
 
+class Type(models.Model):
+    name = models.CharField('类型', max_length=255)
+    isDelete = models.BooleanField('是否删除', default=False)
+
+    def __str__(self):
+        return self.name
+
+
 class Taishiji(models.Model):
     tname = models.CharField('名称', max_length=255)
     tbrand = models.CharField('品牌', max_length=50, default='未知')

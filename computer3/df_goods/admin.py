@@ -1,6 +1,16 @@
 from django.contrib import admin
-from .models import Taishiji,Bijiben,Zhuban,Xianka,Cpu,Neicun,Yingpan,Jixiang,Yjxsq,Yinxiang,Shubiao,Jianpan
+from .models import Type, Taishiji, Bijiben, Zhuban, Xianka, Cpu, Neicun, Yingpan, Jixiang, Yjxsq, Yinxiang, Shubiao, Jianpan
 # Register your models here.
+
+
+class TypeAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name']
+    list_per_page = 10
+    list_filter = ['name']
+    search_fields = ['name']
+
+
+admin.site.register(Type, TypeAdmin)
 
 
 class TaishijiAdmin(admin.ModelAdmin):

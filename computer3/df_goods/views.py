@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Taishiji,Bijiben,Zhuban,Xianka,Cpu,Neicun,Yingpan,Jixiang,Yjxsq,Yinxiang,Shubiao,Jianpan
+from .models import Type,Taishiji,Bijiben,Zhuban,Xianka,Cpu,Neicun,Yingpan,Jixiang,Yjxsq,Yinxiang,Shubiao,Jianpan
 # Create your views here.
 
 
@@ -12,6 +12,8 @@ def index(request):
 
 def singlei(request, id):
     single = Cpu.objects.get(pk=id)
+    single.cclick += 1
+    single.save()
     return render(request, 'df_goods/singlec.html', {'single': single})
 
 
@@ -146,3 +148,20 @@ def jixiang(request):
 def singlej(request, id):
     single = Jixiang.objects.get(pk=id)
     return render(request, 'df_goods/singlej.html', {'single': single})
+
+
+def gouwuche(request):
+    return HttpResponse('购物车')
+
+
+# def list(request, id):
+#     iddict = {'1':Taishiji,'2':Bijiben,3:Zhuban,4:Xianka,5:Cpu,6:Neicun,7:Yingpan,8:Jixiang,9:Yjxsq,10:Shubiao,11:Jianpan,12:Yinxiang}
+#     print(iddict[1], type(iddict[1]))
+#     goods = iddict[id].objects.all()
+#     return render(request, 'df_goods/list.html', {'goods': goods})
+
+
+def list(request):
+    goods = Bijiben.objects.all()
+    return render(request, 'df_goods/list1.html', {'goods': goods})
+
